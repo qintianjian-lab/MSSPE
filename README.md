@@ -3,21 +3,35 @@
 ![Encoder Structure](./img/fig2.png)
 ![Network Structure](./img/fig3.png)
 
-## Environment
 
-> - Ubuntu Server 22.04 LTS
-> - Python 3.10.8
-> - CUDA 11.7
-> - CUDNN 8.5
 
-Create a new conda environment and install the required packages:
+## Requirements
 
-```shell
-conda create -n msspe python=3.10
-conda activate msspe
-conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
-pip3 install opencv-python matplotlib scipy scikit-learn tqdm tensorboard tensorboardX torchinfo
-```
+1. Clone this repo in your directory and enter the repo directory.
+
+   ```bash
+   git clone https://github.com/qintianjian-lab/MSSPE.git
+   cd ./MSSPE
+   ```
+
+2. Create `conda` environment (`python >= 3.10`) and activate the environment.
+
+   ```bash
+   conda create -n msspe python=3.11
+   conda activate msspe
+   ```
+
+3. Install all requirement.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Training model with `./cfg/cfg.py`.
+
+   ```bash
+   python train.py
+   ```
 
 Before training, check the `cfg/cfg.py` file to set your training configuration.
 
